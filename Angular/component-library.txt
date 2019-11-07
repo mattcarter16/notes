@@ -1,0 +1,48 @@
+What:
+	• Used to imported into multiple apps/ projects
+
+Requirements: 
+	• ng-packagr
+
+Help: 
+	• https://medium.com/@nikolasleblanc/building-an-angular-4-component-library-with-the-angular-cli-and-ng-packagr-53b2ade0701e
+	
+sp-extension: 
+	• Models
+		○ email-properties – used for email in sp-extension
+		○ sp-user 
+	• Services
+		○ sp-extension
+		○ sp-service
+		○ user-alert
+	• Modules
+		○ material
+		○ sp-people-picker
+		○ is-loading
+		○ is-submitting
+		○ is-updating
+		○ sp-comments
+		○ sp-help
+		
+Create Component Library
+
+	1. Install ng-packagr
+	2. Install tsickle
+	3. Create public_api.ts file (under package.json file)
+	4. Add exports  (export * from './src/app/services/auth-guard.service';)
+	5. Add ng-package.json file 
+	6. Add npm script in json file ("ng-packagr -p ng-package.json")
+	7. Update version in package.json - 'npm version (patch/minor/major)'
+	8. In terminal run 'npm run packagr' - new dist folder created
+	9. CD into dist folder and in terminal run 'npm pack' - this creates a tarball file (sp-extension-0.0.1.tgz)
+	
+	
+
+Update Component Library
+	
+	1. Add export in public_api.ts file
+	2. Update version in package.json - 'npm version (patch/minor/major)'
+	3. In terminal run 'npm run packagr' - new dist folder created
+	4. CD into dist folder and in terminal run 'npm pack' - this creates a tarball file (sp-extension-0.0.1.tgz)
+	5. If this is not in a current app - in the app run 'npm install C:\se_tfs2017npm pack\SharePoint\_Shared\sp-extension\dist\sp-extension-0.0.1.tgz (this will change with version changes)
+	6. If this is already in the app - update the version of the package in package.json file of app and run 'npm install' 
