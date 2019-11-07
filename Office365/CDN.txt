@@ -1,0 +1,27 @@
+Enable the CDN
+	• Connect to SharePoint online in Powershell
+		○ Need SharePoint Online Management Shell
+		○ Connect-SPOService -Url https://healthequity-admin.sharepoint.com
+	• Sign in with Admin credentials
+	• Check if CDN is set
+		○ Get-SPOTenantCdnEnabled -CdnType Public
+	• Enable/ set-up CDN
+		○ Set-SPOTenantCdnEnabled - CdnType Public
+		○ Get-SPOTenantCdnOrigins -CdnType Public (to get status; 'configuration pending' will no longer show)
+
+Manage CDN
+	• Get-SPOTenantCdnPolicies -CdnType Public
+	• Create site and library for CDN if you do not want to use the default)
+
+	Change Origin details (library to use for CDN)
+		○ Add-SPOTenantCdnOrigin -CdnType Public -OriginUrl sites/cdn/cdn (new site is CDN new Library is CDN)
+	
+	Add a file type extension
+		○ Set-SPOTenantCdnPolicy -CdnType Public - PolicyType IncludeFileExtensions -PolicyValue "CSS,EOT,GIF,ICO,JPEG,JPG,JS,MAP,PNG,SVG,TTF,WOFF,[add file extension]"
+
+URL
+	• Add https://publiccdn.sharepointonline.com[tennant]/[site]/[filename] 
+		○ https://publiccdn.sharepointonline.com/healthequity.sharepoint.com/sites/cdn/cdn/[file name]
+	• Need proper referrer when using third party API tools like Postman
+		○ Add Header
+			§ Referer / https://healthequity.sharepoint.com
