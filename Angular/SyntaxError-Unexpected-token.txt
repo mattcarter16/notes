@@ -1,0 +1,15 @@
+I had the following code in the component.  
+
+public apiUrl = environment.apiUrl;
+public webServerRelativeUrl = 'ops/ps/sc';
+public webAbsoluteUrl = `${this.apiUrl}${this.webServerRelativeUrl}`;
+
+
+	• I moved the code to its own class 'spWeb'
+	• Then set component webAbsoluteUrl variable to this.spWeb.webAbsoluteUrl
+	
+	constructor(private spWeb: SpWeb) {
+	this.webAbsoluteUrl = this.spWeb.webAbsoluteUrl
+	}
+	
+	• Then syntax error went away
