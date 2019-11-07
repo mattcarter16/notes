@@ -1,0 +1,18 @@
+Create new workspace
+ng new *workspace-name* --style scss --createApplication false 
+
+--createApplication creates an empty workspace with no initial app. You can then use the generate application command so that all apps are created in the projects folder.
+
+Add Application
+ng generate application *new-application-name* --style scss
+	
+Add Library
+ng generate library *library-name* --prefix spx
+	
+Generating components, service etc.
+ng g c my-new-component --project library-name
+ng g s my-new-service --project library-name
+
+Serve / Build
+ng serve application-name --aot
+ng build application-name --prod --aot  (use --configuration==production or --configuration=uat)
