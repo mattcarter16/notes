@@ -1,0 +1,22 @@
+• Screen - scr
+• Gallery – gal
+• Label – lbl
+• Variable – var
+• Collection - col
+• Icon – icn
+• All shapes – shp
+• Data Table – tab
+• Forms – frm
+• Charts (including Power BI reports) – cht
+• Button – btn
+• Image – img
+• Cards – crd
+• Check box – chk
+• Drop-down – drp
+• Date picker – dte
+• List box – lst
+• Radio – rdo
+• Toggle – tog
+• Slider – sld
+• Ratings – rat
+• Text Inputs (including rich and HTML)- inp
