@@ -1,0 +1,2 @@
+## Tags
+Using tags, team owners can organize users based on a common attribute, such as role, project, skill, training, or location. After team members have tags, the team owner or a tagged team member can create a channel post, @tagName, that notifies only the users who have that tag (in this case @tagName). Tags are team-based; you have to a be a member of a team in order to use an associated tag.
